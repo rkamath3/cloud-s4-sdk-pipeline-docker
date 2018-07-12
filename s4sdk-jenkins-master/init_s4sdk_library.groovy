@@ -3,8 +3,8 @@ import jenkins.model.*
 import jenkins.plugins.git.GitSCMSource
 import org.jenkinsci.plugins.workflow.libs.*
 
-createIfMissing("s4sdk-pipeline-library", "https://github.com/SAP/cloud-s4-sdk-pipeline-lib.git")
-createIfMissing("piper-library-os", "https://github.com/SAP/jenkins-library.git")
+createIfMissing("s4sdk-pipeline-library", "https://github.com/rkamath3/cloud-s4-sdk-pipeline-lib.git")
+createIfMissing("piper-library-os", "https://github.com/rkamath3/jenkins-library.git")
 
 def createIfMissing(String libName, String gitUrl) {
     GitSCMSource gitScmSource = new GitSCMSource(null, gitUrl, "", "origin", "+refs/heads/*:refs/remotes/origin/*", "*", "", true)
